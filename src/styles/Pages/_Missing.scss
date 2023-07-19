@@ -1,0 +1,18 @@
+.missingPage {
+    height: 60vh;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5em;
+    h1{
+        color: $main-color;
+        font-size: 288px;
+    }
+    h2{
+        color: $main-color;
+        font-size: $desktop-L;
+    }
+    .navLink{
+        color: $main-color;
+        font-size: $desktop-S;
+    }
+}

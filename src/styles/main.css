@@ -227,4 +227,23 @@ footer p {
   max-width: 80%;
 }
 
+.missingPage {
+  height: 60vh;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5em;
+}
+.missingPage h1 {
+  color: #FF6060;
+  font-size: 288px;
+}
+.missingPage h2 {
+  color: #FF6060;
+  font-size: 36px;
+}
+.missingPage .navLink {
+  color: #FF6060;
+  font-size: 18px;
+}
+
 /*# sourceMappingURL=main.css.map */
