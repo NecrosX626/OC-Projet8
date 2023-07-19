@@ -178,6 +178,43 @@ footer p {
   animation: hideText 0.25s forwards;
 }
 
+.caroussel {
+  justify-content: center;
+  max-width: 1280px;
+  min-height: 480px;
+  position: relative;
+  color: white;
+}
+.caroussel__slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  border-radius: 25px;
+  margin-bottom: 2em;
+}
+.caroussel__arrow {
+  width: 2em;
+}
+.caroussel__arrow--left {
+  position: absolute;
+  left: 2em;
+}
+.caroussel__arrow--right {
+  position: absolute;
+  right: 2em;
+}
+.caroussel span {
+  position: absolute;
+  align-self: center;
+  bottom: 2em;
+}
+
+.ratings {
+  justify-content: space-between;
+}
+
 .gallery {
   flex-wrap: wrap;
   justify-content: center;
@@ -215,6 +252,54 @@ footer p {
   width: 65%;
   align-self: flex-end;
   margin: 1em;
+}
+
+.locationWrapper .location {
+  justify-content: space-between;
+  color: #FF6060;
+}
+.locationWrapper .location__title {
+  gap: 1em;
+}
+.locationWrapper .location__title h1 {
+  font-size: 36px;
+}
+.locationWrapper .location__title p {
+  font-size: 18px;
+}
+.locationWrapper .location__title ul {
+  gap: 1em;
+}
+.locationWrapper .location__title ul .tag {
+  color: white;
+  background-color: #FF6060;
+  border-radius: 10px;
+  padding: 0.5em 3em;
+}
+.locationWrapper .location__hostRating {
+  width: 15%;
+  gap: 1em;
+}
+.locationWrapper .location__hostRating .host {
+  gap: 1em;
+}
+.locationWrapper .location__hostRating .host__name {
+  text-align: end;
+  align-self: center;
+}
+.locationWrapper .location__hostRating .host__pic {
+  border-radius: 50%;
+  width: 50%;
+}
+.locationWrapper .details {
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+.locationWrapper .details .collapse {
+  width: 45%;
+  color: white;
+  margin-bottom: 2em;
 }
 
 .aboutPage {

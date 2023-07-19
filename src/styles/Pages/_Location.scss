@@ -1,0 +1,51 @@
+.locationWrapper {
+    .location {
+      justify-content: space-between;
+      color: $main-color;
+      &__title {
+        gap: 1em;
+        h1 {
+          font-size: $desktop-L;
+        }
+        p {
+          font-size: $desktop-S;
+        }
+        ul {
+          gap: 1em;
+          .tag {
+            color: white;
+            background-color: $main-color;
+            border-radius: 10px;
+            padding: 0.5em 3em;
+          }
+        }
+      }
+      &__hostRating {
+        width: 15%;
+        gap: 1em;
+        .host {
+          gap: 1em;
+          &__name {
+            text-align: end;
+            align-self: center;
+          }
+          &__pic {
+            border-radius: 50%;
+            width: 50%;
+          }
+        }
+  
+      }
+    }
+    .details {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 2em;
+      .collapse {
+        width: 45%;
+        color: white;
+        margin-bottom: 2em;
+      }
+    }
+  }
+  

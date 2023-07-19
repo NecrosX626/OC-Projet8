@@ -8,6 +8,7 @@ import "./styles/main.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import Location from "./pages/Location";
 import About from "./pages/About";
 import Missing from "./pages/Missing";
 
@@ -18,6 +19,7 @@ root.render(
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Location/:locationIndex" element={<Location />} />
         <Route path="/About" element={<About />} />
         <Route path="*" element={<Missing />} />
       </Routes>
