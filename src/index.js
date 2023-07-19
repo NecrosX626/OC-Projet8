@@ -7,6 +7,7 @@ import "./styles/main.css";
 //Imports Components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,7 +15,7 @@ root.render(
     <Router>
       <Header />
       <Routes>
-
+        <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
     </Router>

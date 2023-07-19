@@ -6,8 +6,8 @@ function Header(){
         <header className="flexHorizontal">
             <img className="logoHeader" src={logo} alt="Logo"/>
             <nav className="flexHorizontal">
-                {/* <Link className="navLink" to="/">Accueil</Link>
-                <Link className="navLink" to="/about">A Propos</Link> */}
+                <Link className="navLink" to="/">Accueil</Link>
+                <Link className="navLink" to="/about">A Propos</Link>
             </nav>
         </header>
     )

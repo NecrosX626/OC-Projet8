@@ -91,4 +91,65 @@ footer p {
   font-size: 24px;
 }
 
+.banner {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+  margin-bottom: 3em;
+  background-color: black;
+  border-radius: 25px;
+  max-height: 15em;
+  overflow: hidden;
+}
+.banner img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 25px;
+  opacity: 0.5;
+}
+.banner h2 {
+  position: absolute;
+  font-size: 48px;
+}
+
+.gallery {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  width: 100%;
+  background-color: #F6F6F6;
+  color: white;
+  margin-bottom: 2em;
+  padding: 3em;
+  border-radius: 25px;
+}
+.gallery .links {
+  cursor: pointer;
+  position: relative;
+  width: 22em;
+  height: 22em;
+  overflow: hidden;
+  color: white;
+}
+.gallery .links img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.gallery .links .gradient {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  border-radius: 10px;
+}
+.gallery .links .gradient h3 {
+  width: 65%;
+  align-self: flex-end;
+  margin: 1em;
+}
+
 /*# sourceMappingURL=main.css.map */

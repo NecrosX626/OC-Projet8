@@ -1,0 +1,21 @@
+.banner{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    margin-bottom: 3em;
+    background-color: black;
+    border-radius: 25px;
+    max-height: 15em; //???
+    overflow:hidden;
+    img{
+        object-fit: cover;
+        width: 100%;
+        border-radius: 25px;
+        opacity: 0.5;
+    }
+    h2{
+        position: absolute;
+        font-size: $desktop-XL;
+    }
+}
