@@ -15,6 +15,43 @@
 24
 96
 */
+/*Collapse*/
+@keyframes arrowOpen {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+@keyframes arrowClose {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes showText {
+  0% {
+    padding: 0.5em 1em;
+    max-height: 0;
+  }
+  100% {
+    padding: 0.5em 1em;
+    max-height: fit-content;
+  }
+}
+@keyframes hideText {
+  0% {
+    padding: 0.5em 1em;
+    max-height: fit-content;
+  }
+  100% {
+    padding: 0 1em;
+    max-height: 0;
+  }
+}
 * {
   font-family: "Montserrat";
   font-weight: 500;
@@ -113,6 +150,34 @@ footer p {
   font-size: 48px;
 }
 
+.collapse__label {
+  cursor: pointer;
+  color: white;
+  justify-content: space-between;
+  background: #FF6060;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+}
+.collapse__label .openedCollapse {
+  animation: arrowOpen 0.5s forwards;
+}
+.collapse__label .closedCollapse {
+  animation: arrowClose 0.5s forwards;
+}
+.collapse__text {
+  box-sizing: initial;
+  background: #F6F6F6;
+  color: #FF6060;
+  max-height: 0;
+  overflow: hidden;
+}
+.collapse .displayed {
+  animation: showText 0.25s forwards;
+}
+.collapse .hidden {
+  animation: hideText 0.25s forwards;
+}
+
 .gallery {
   flex-wrap: wrap;
   justify-content: center;
@@ -150,6 +215,16 @@ footer p {
   width: 65%;
   align-self: flex-end;
   margin: 1em;
+}
+
+.aboutPage {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  gap: 2em;
+}
+.aboutPage .collapse {
+  margin: auto;
+  max-width: 80%;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,38 @@
+//ANIMATIONS
+/*Collapse*/
+@keyframes arrowOpen {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-180deg);
+    }
+  }
+  @keyframes arrowClose {
+    0% {
+      transform: rotate(-180deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes showText {
+    0% {
+      padding: 0.5em 1em;
+      max-height: 0;
+    }
+    100% {
+      padding: 0.5em 1em;
+      max-height: fit-content;
+    }
+  }
+  @keyframes hideText {
+    0% {
+      padding: 0.5em 1em;
+      max-height: fit-content;
+    }
+    100% {
+      padding: 0 1em;
+      max-height: 0;
+    }
+  }

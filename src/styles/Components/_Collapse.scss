@@ -1,0 +1,30 @@
+.collapse {
+    &__label {
+      cursor: pointer;
+      color: white;
+      justify-content: space-between;
+      background: $main-color;
+      border-radius: 5px;
+      padding: 0.5em 1em;
+      .openedCollapse {
+        animation: arrowOpen 0.5s forwards;
+      }
+      .closedCollapse {
+        animation: arrowClose 0.5s forwards;
+      }
+    }
+    &__text {
+      box-sizing: initial;
+      background: $background-color;
+      color: $main-color;
+      max-height: 0;
+      overflow: hidden;
+    }
+    .displayed {
+      animation: showText 0.25s forwards;
+    }
+    .hidden {
+      animation: hideText 0.25s forwards;
+    }
+  }
+  
