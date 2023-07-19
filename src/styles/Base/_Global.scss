@@ -1,0 +1,38 @@
+//GLOBAL
+*{
+    font-family: "Montserrat";
+    font-weight: 500;
+    list-style-type: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+section{
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+a, .navLink{
+    text-decoration: none;
+}
+a:hover, .navLink:hover{
+    text-decoration: underline;
+}
+li {
+    list-style-type: none;
+}
+.flexHorizontal{
+    display:flex;
+    flex-direction: row;
+}
+.flexVertical{
+    display:flex;
+    flex-direction: column;
+}

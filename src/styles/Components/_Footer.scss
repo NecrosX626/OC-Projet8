@@ -1,0 +1,13 @@
+footer{
+    background-color: black;
+    color: white;
+    align-items: center;
+    padding: 2em;
+    gap: 2em;
+    img{
+        width: 10%;
+    }
+    p{
+        font-size: $desktop-M;
+    }
+}

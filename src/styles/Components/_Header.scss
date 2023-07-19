@@ -1,0 +1,16 @@
+header{
+    justify-content: space-between;
+    margin:auto;
+    padding: 2em 0;
+    width: 1240px;
+    nav{
+        align-items: center;
+        gap: 5em;
+        .navLink{
+            color: $main-color;
+        }
+        .navLink:hover{
+            text-decoration: underline;
+        }
+    }
+}
