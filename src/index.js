@@ -21,6 +21,7 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/Location/:locationIndex" element={<Location />} />
         <Route path="/About" element={<About />} />
+        <Route path="/Missing" element={<Missing />} />
         <Route path="*" element={<Missing />} />
       </Routes>
       <Footer />

@@ -21,7 +21,7 @@
         }
       }
       &__hostRating {
-        width: 15%;
+        max-width: 15%;
         gap: 1em;
         .host {
           gap: 1em;
@@ -38,7 +38,6 @@
       }
     }
     .details {
-      flex-direction: row;
       justify-content: space-between;
       margin-top: 2em;
       .collapse {

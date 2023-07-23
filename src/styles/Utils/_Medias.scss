@@ -1,0 +1,139 @@
+@media screen and (max-width: 380px) {
+    //GLOBAL
+    section, header{
+        max-width: 350px;
+    }
+    header{
+        img{
+            max-width: 30%;
+        }
+        nav{
+            font-size: $mobile-S;
+            text-transform: uppercase;
+            .navLink{
+                padding-left: 3em;
+            }
+        }
+    }
+    footer{
+        padding: 4em;
+        img{
+            width: 30%;
+        }
+        p{
+            max-width: 40%;
+            font-size: $mobile-S;
+        }
+    }
+    //COMPONENTS
+    .banner{
+        max-height: 15vh;
+        border-radius: 10px;
+        h2{
+            font-size: $desktop-M;
+        }
+    }
+    .collapse{
+        h2{
+            font-size: $desktop-XS;
+        }
+        img{
+            width: 5%;
+        }
+        &__text{
+            font-size: $mobile-S;
+        }
+    }
+    .caroussel{
+        min-height: 40vh;
+        &__arrow--left{
+            width: 5%;
+            left: 1em;
+        }&__arrow--right{
+            width: 5%;
+            right: 1em;
+        }
+        span{
+            display: none;
+        }
+    }
+    //HOME PAGE
+    .gallery{
+        background-color: white;
+        margin-top: -5em;
+        .links{
+            height: 15em;
+        }
+    }
+    //ABOUT PAGE
+    .aboutPage{
+        margin-top: 0;
+        .banner{
+            max-height: 30vh;
+            margin: 0;
+        }
+        .collapse{
+            max-width: 100%;
+        }
+    }
+    //MISSING PAGE
+    .missingPage{
+        margin-top: 5em;
+        h1{
+            font-size: 96px;
+        }
+        h2{
+            font-size: $desktop-S;
+        }
+        a{
+            font-size: $desktop-XS;
+        }
+    }
+    //LOCATIONS PAGES
+    .locationWrapper {
+        .location {
+            flex-direction: column;
+            gap: 1em;
+          &__title {
+            h1 {
+              font-size: $desktop-S;
+            }
+            p {
+              font-size: $desktop-XS;
+            }
+            ul {
+              gap: 1em;
+              .tag {
+                font-size: $mobile-XS;
+                border-radius: 5px;
+              }
+            }
+          }
+          &__hostRating {
+            max-width: 100%;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            gap: unset;
+            .host {
+                max-width: 50%;
+              &__pic {
+                border-radius: 50%;
+                width: 20%;
+              }
+            }
+            .ratings{
+                img{
+                    width: 75%;
+                }
+            }
+          }
+        }
+        .details {
+          flex-direction: column;
+          .collapse {
+            width: 100%;
+          }
+        }
+      }    
+}

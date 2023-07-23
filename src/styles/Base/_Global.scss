@@ -10,16 +10,15 @@
 #root{
     display: flex;
     flex-direction: column;
-    max-width: 100vw;
-    max-height: 100vh;
 }
 section{
-    max-width: 1240px;
+    width: 1240px;
     display: flex;
     flex-direction: column;
     margin: auto;
 }
 a, .navLink{
+    color: $main-color;
     text-decoration: none;
 }
 a:hover, .navLink:hover{

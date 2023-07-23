@@ -3,10 +3,14 @@ header{
     margin:auto;
     padding: 2em 0;
     width: 1240px;
+    img{
+        max-width: auto;
+    }
     nav{
+        justify-content: space-between;
         align-items: center;
-        gap: 5em;
         .navLink{
+            padding-left: 5em;
             color: $main-color;
         }
         .navLink:hover{
