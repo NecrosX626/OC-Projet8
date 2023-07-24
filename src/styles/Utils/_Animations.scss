@@ -1,38 +1,40 @@
 //ANIMATIONS
 /*Collapse*/
+//Arrows
 @keyframes arrowOpen {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(-180deg);
-    }
+  0% {
+    transform: rotate(0deg);
   }
-  @keyframes arrowClose {
-    0% {
-      transform: rotate(-180deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
+  100% {
+    transform: rotate(-180deg);
   }
-  @keyframes showText {
-    0% {
-      padding: 0.5em 1em;
-      max-height: 0;
-    }
-    100% {
-      padding: 0.5em 1em;
-      max-height: fit-content;
-    }
+}
+@keyframes arrowClose {
+  0% {
+    transform: rotate(-180deg);
   }
-  @keyframes hideText {
-    0% {
-      padding: 0.5em 1em;
-      max-height: fit-content;
-    }
-    100% {
-      padding: 0 1em;
-      max-height: 0;
-    }
+  100% {
+    transform: rotate(0deg);
   }
+}
+//Text
+@keyframes showText {
+  0% {
+    padding: 0.5em 1em;
+    max-height: 0;
+  }
+  100% {
+    padding: 0.5em 1em;
+    max-height: fit-content;
+  }
+}
+@keyframes hideText {
+  0% {
+    padding: 0.5em 1em;
+    max-height: fit-content;
+  }
+  100% {
+    padding: 0 1em;
+    max-height: 0;
+  }
+}

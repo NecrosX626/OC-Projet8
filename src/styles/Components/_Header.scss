@@ -1,20 +1,16 @@
-header{
+header {
+  justify-content: space-between;
+  margin: auto;
+  padding: 2em 0;
+  width: 1240px;
+  img {
+    max-width: auto;
+  }
+  nav {
     justify-content: space-between;
-    margin:auto;
-    padding: 2em 0;
-    width: 1240px;
-    img{
-        max-width: auto;
+    align-items: center;
+    .navLink {
+      padding-left: 5em;
     }
-    nav{
-        justify-content: space-between;
-        align-items: center;
-        .navLink{
-            padding-left: 5em;
-            color: $main-color;
-        }
-        .navLink:hover{
-            text-decoration: underline;
-        }
-    }
+  }
 }

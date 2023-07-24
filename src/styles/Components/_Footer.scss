@@ -1,14 +1,15 @@
-footer{
-    background-color: black;
+footer {
+  align-items: center;
+  margin-top: 2em;
+  padding: 4em;
+  gap: 2em;
+  background-color: black;
+  img {
+    width: 10%;
+  }
+  p {
+    text-align: center;
+    font-size: $desktop-M;
     color: white;
-    align-items: center;
-    padding: 2em;
-    gap: 2em;
-    img{
-        width: 10%;
-    }
-    p{
-        text-align: center;
-        font-size: $desktop-M;
-    }
+  }
 }

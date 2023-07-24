@@ -1,31 +1,29 @@
 .caroussel {
-    justify-content: center;
-    max-width: 1280px;
-    min-height: 480px;
-    position: relative;
-    color: white;
-    &__slide {
+  position: relative;
+  justify-content: center;
+
+  min-height: 50vh;
+  &__slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+  &__arrow {
+    &--left {
       position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-      border-radius: 25px;
-      margin-bottom: 2em;
+      left: 2em;
     }
-    &__arrow {
-      &--left {
-        position: absolute;
-        left: 2em;
-      }
-      &--right {
-        position: absolute;
-        right: 2em;
-      }
-    }
-    span {
+    &--right {
       position: absolute;
-      align-self: center;
-      bottom: 2em;
+      right: 2em;
     }
   }
+  span {
+    position: absolute;
+    align-self: center;
+    bottom: 2em;
+    color: white;
+  }
+}

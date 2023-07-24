@@ -1,30 +1,33 @@
 .collapse {
-    &__label {
-      cursor: pointer;
+  &__label {
+    cursor: pointer;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    background: $main-color;
+    h2 {
+      font-size: $desktop-S;
       color: white;
-      justify-content: space-between;
-      background: $main-color;
-      border-radius: 5px;
-      padding: 0.5em 1em;
-      .openedCollapse {
-        animation: arrowOpen 0.5s forwards;
-      }
-      .closedCollapse {
-        animation: arrowClose 0.5s forwards;
-      }
     }
-    &__text {
-      box-sizing: initial;
-      background: $background-color;
-      color: $main-color;
-      max-height: 0;
-      overflow: hidden;
+    .openedCollapse {
+      animation: arrowOpen 0.5s forwards;
     }
-    .displayed {
-      animation: showText 0.25s forwards;
-    }
-    .hidden {
-      animation: hideText 0.25s forwards;
+    .closedCollapse {
+      animation: arrowClose 0.5s forwards;
     }
   }
-  
+  &__text {
+    box-sizing: initial;
+    max-height: 0;
+    font-size: $desktop-S;
+    background: $background-color;
+    color: $main-color;
+    overflow: hidden;
+  }
+  .displayed {
+    animation: showText 0.25s forwards;
+  }
+  .hidden {
+    animation: hideText 0.25s forwards;
+  }
+}

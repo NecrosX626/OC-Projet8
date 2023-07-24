@@ -1,20 +1,5 @@
 /*Colors*/
 /*Fonts Sizes*/
-/*
-288
-48
-36
-24 h2
-18 h3
-14
-
-10
-12
-14
-18
-24
-96
-*/
 /*Collapse*/
 @keyframes arrowOpen {
   0% {
@@ -53,12 +38,13 @@
   }
 }
 * {
-  font-family: "Montserrat";
-  font-weight: 500;
-  list-style-type: none;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Montserrat";
+  font-weight: 500;
+  list-style-type: none;
+  color: #ff6060;
 }
 
 #root {
@@ -67,18 +53,17 @@
 }
 
 section {
-  width: 1240px;
+  max-width: 1240px;
   display: flex;
   flex-direction: column;
   margin: auto;
 }
 
-a, .navLink {
-  color: #FF6060;
+a {
   text-decoration: none;
 }
 
-a:hover, .navLink:hover {
+a:hover {
   text-decoration: underline;
 }
 
@@ -111,18 +96,14 @@ header nav {
 }
 header nav .navLink {
   padding-left: 5em;
-  color: #FF6060;
-}
-header nav .navLink:hover {
-  text-decoration: underline;
 }
 
 footer {
-  background-color: black;
-  color: white;
   align-items: center;
-  padding: 2em;
+  margin-top: 2em;
+  padding: 4em;
   gap: 2em;
+  background-color: black;
 }
 footer img {
   width: 10%;
@@ -130,37 +111,39 @@ footer img {
 footer p {
   text-align: center;
   font-size: 24px;
+  color: white;
 }
 
 .banner {
   justify-content: center;
   align-items: center;
   position: relative;
-  color: white;
   margin-bottom: 3em;
-  background-color: black;
-  border-radius: 25px;
   max-height: 25vh;
+  border-radius: 25px;
+  background-color: black;
   overflow: hidden;
 }
 .banner img {
   object-fit: cover;
-  max-width: 100%;
   opacity: 0.5;
 }
 .banner h2 {
-  padding: 1em;
   position: absolute;
   font-size: 48px;
+  color: white;
 }
 
 .collapse__label {
   cursor: pointer;
-  color: white;
   justify-content: space-between;
-  background: #FF6060;
   border-radius: 5px;
   padding: 0.5em 1em;
+  background: #ff6060;
+}
+.collapse__label h2 {
+  font-size: 18px;
+  color: white;
 }
 .collapse__label .openedCollapse {
   animation: arrowOpen 0.5s forwards;
@@ -170,9 +153,10 @@ footer p {
 }
 .collapse__text {
   box-sizing: initial;
-  background: #F6F6F6;
-  color: #FF6060;
   max-height: 0;
+  font-size: 18px;
+  background: #f6f6f6;
+  color: #ff6060;
   overflow: hidden;
 }
 .collapse .displayed {
@@ -183,20 +167,16 @@ footer p {
 }
 
 .caroussel {
-  justify-content: center;
-  max-width: 1280px;
-  min-height: 480px;
   position: relative;
-  color: white;
+  justify-content: center;
+  min-height: 50vh;
 }
 .caroussel__slide {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: -1;
   border-radius: 25px;
-  margin-bottom: 2em;
+  object-fit: cover;
 }
 .caroussel__arrow--left {
   position: absolute;
@@ -210,6 +190,7 @@ footer p {
   position: absolute;
   align-self: center;
   bottom: 2em;
+  color: white;
 }
 
 .ratings {
@@ -217,15 +198,13 @@ footer p {
 }
 
 .gallery {
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2em;
-  width: 100%;
-  background-color: #F6F6F6;
-  color: white;
-  margin-bottom: 2em;
   padding: 3em;
+  width: 100%;
   border-radius: 25px;
+  background-color: #f6f6f6;
 }
 .gallery .links {
   cursor: pointer;
@@ -233,31 +212,31 @@ footer p {
   width: 22em;
   height: 22em;
   overflow: hidden;
-  color: white;
 }
 .gallery .links img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border-radius: 10px;
+  object-fit: cover;
 }
 .gallery .links .gradient {
   position: absolute;
   display: flex;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
   border-radius: 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 }
 .gallery .links .gradient h3 {
-  width: 65%;
   align-self: flex-end;
+  width: 65%;
   margin: 1em;
+  color: white;
 }
 
 .locationWrapper .location {
   justify-content: space-between;
-  color: #FF6060;
+  margin: 2em 0;
 }
 .locationWrapper .location__title {
   gap: 1em;
@@ -270,12 +249,14 @@ footer p {
 }
 .locationWrapper .location__title ul {
   gap: 1em;
+  flex-wrap: wrap;
 }
 .locationWrapper .location__title ul .tag {
-  color: white;
-  background-color: #FF6060;
-  border-radius: 10px;
   padding: 0.5em 3em;
+  font-size: 14px;
+  border-radius: 25px;
+  background-color: #ff6060;
+  color: white;
 }
 .locationWrapper .location__hostRating {
   max-width: 15%;
@@ -285,26 +266,21 @@ footer p {
   gap: 1em;
 }
 .locationWrapper .location__hostRating .host__name {
-  text-align: end;
   align-self: center;
+  text-align: end;
 }
 .locationWrapper .location__hostRating .host__pic {
-  border-radius: 50%;
   width: 50%;
+  border-radius: 50%;
 }
 .locationWrapper .details {
   justify-content: space-between;
-  margin-top: 2em;
 }
 .locationWrapper .details .collapse {
   width: 45%;
-  color: white;
-  margin-bottom: 2em;
 }
 
 .aboutPage {
-  margin-top: 2em;
-  margin-bottom: 2em;
   gap: 2em;
 }
 .aboutPage .collapse {
@@ -313,27 +289,24 @@ footer p {
 }
 
 .missingPage {
-  height: 60vh;
-  justify-content: space-between;
+  height: 70vh;
+  justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 5em;
   text-align: center;
 }
 .missingPage h1 {
-  color: #FF6060;
   font-size: 288px;
 }
 .missingPage h2 {
-  color: #FF6060;
   font-size: 36px;
 }
-.missingPage .navLink {
-  color: #FF6060;
+.missingPage a {
   font-size: 18px;
 }
 
 @media screen and (max-width: 380px) {
-  section, header {
+  section,
+  header {
     max-width: 350px;
   }
   header img {
@@ -346,11 +319,8 @@ footer p {
   header nav .navLink {
     padding-left: 3em;
   }
-  footer {
-    padding: 4em;
-  }
   footer img {
-    width: 30%;
+    width: 50%;
   }
   footer p {
     max-width: 40%;
@@ -361,6 +331,7 @@ footer p {
     border-radius: 10px;
   }
   .banner h2 {
+    padding: 1em;
     font-size: 24px;
   }
   .collapse h2 {
@@ -388,13 +359,10 @@ footer p {
   }
   .gallery {
     background-color: white;
-    margin-top: -5em;
+    padding: 0;
   }
   .gallery .links {
-    height: 15em;
-  }
-  .aboutPage {
-    margin-top: 0;
+    max-height: 15em;
   }
   .aboutPage .banner {
     max-height: 30vh;
@@ -402,9 +370,6 @@ footer p {
   }
   .aboutPage .collapse {
     max-width: 100%;
-  }
-  .missingPage {
-    margin-top: 5em;
   }
   .missingPage h1 {
     font-size: 96px;
@@ -418,15 +383,13 @@ footer p {
   .locationWrapper .location {
     flex-direction: column;
     gap: 1em;
+    margin: 1em 0;
   }
   .locationWrapper .location__title h1 {
     font-size: 18px;
   }
   .locationWrapper .location__title p {
     font-size: 14px;
-  }
-  .locationWrapper .location__title ul {
-    gap: 1em;
   }
   .locationWrapper .location__title ul .tag {
     font-size: 10px;
@@ -440,17 +403,18 @@ footer p {
     gap: unset;
   }
   .locationWrapper .location__hostRating .host {
+    justify-content: flex-end;
     max-width: 50%;
   }
   .locationWrapper .location__hostRating .host__pic {
-    border-radius: 50%;
-    width: 20%;
+    width: 25%;
   }
   .locationWrapper .location__hostRating .ratings img {
     width: 75%;
   }
   .locationWrapper .details {
     flex-direction: column;
+    gap: 1em;
   }
   .locationWrapper .details .collapse {
     width: 100%;

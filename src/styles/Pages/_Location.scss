@@ -1,50 +1,47 @@
 .locationWrapper {
-    .location {
-      justify-content: space-between;
-      color: $main-color;
-      &__title {
-        gap: 1em;
-        h1 {
-          font-size: $desktop-L;
-        }
-        p {
-          font-size: $desktop-S;
-        }
-        ul {
-          gap: 1em;
-          .tag {
-            color: white;
-            background-color: $main-color;
-            border-radius: 10px;
-            padding: 0.5em 3em;
-          }
-        }
+  .location {
+    justify-content: space-between;
+    margin: 2em 0;
+    &__title {
+      gap: 1em;
+      h1 {
+        font-size: $desktop-L;
       }
-      &__hostRating {
-        max-width: 15%;
+      p {
+        font-size: $desktop-S;
+      }
+      ul {
         gap: 1em;
-        .host {
-          gap: 1em;
-          &__name {
-            text-align: end;
-            align-self: center;
-          }
-          &__pic {
-            border-radius: 50%;
-            width: 50%;
-          }
+        flex-wrap: wrap;
+        .tag {
+          padding: 0.5em 3em;
+          font-size: $desktop-XS;
+          border-radius: 25px;
+          background-color: $main-color;
+          color: white;
         }
-  
       }
     }
-    .details {
-      justify-content: space-between;
-      margin-top: 2em;
-      .collapse {
-        width: 45%;
-        color: white;
-        margin-bottom: 2em;
+    &__hostRating {
+      max-width: 15%;
+      gap: 1em;
+      .host {
+        gap: 1em;
+        &__name {
+          align-self: center;
+          text-align: end;
+        }
+        &__pic {
+          width: 50%;
+          border-radius: 50%;
+        }
       }
     }
   }
-  
+  .details {
+    justify-content: space-between;
+    .collapse {
+      width: 45%;
+    }
+  }
+}

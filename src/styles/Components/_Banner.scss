@@ -1,21 +1,19 @@
-.banner{
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.banner {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 3em;
+  max-height: 25vh;
+  border-radius: 25px;
+  background-color: black;
+  overflow: hidden;
+  img {
+    object-fit: cover;
+    opacity: 0.5;
+  }
+  h2 {
+    position: absolute;
+    font-size: $desktop-XL;
     color: white;
-    margin-bottom: 3em;
-    background-color: black;
-    border-radius: 25px;
-    max-height: 25vh;
-    overflow: hidden;
-    img{
-        object-fit: cover;
-        max-width: 100%;
-        opacity: 0.5;
-    }
-    h2{
-        padding: 1em;
-        position: absolute;
-        font-size: $desktop-XL;
-    }
+  }
 }
