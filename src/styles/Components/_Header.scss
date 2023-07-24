@@ -2,15 +2,17 @@ header {
   justify-content: space-between;
   margin: auto;
   padding: 2em 0;
-  width: 1240px;
+  max-width: 1240px;
+  width: 100%;
   img {
-    max-width: auto;
+    max-width: 20%;
+    height: 20%;
   }
   nav {
     justify-content: space-between;
     align-items: center;
-    .navLink {
-      padding-left: 5em;
-    }
+    flex-wrap: wrap;
+    min-width: 25%;
+    gap: 1em;
   }
 }

@@ -2,6 +2,7 @@ import starInactiveSVG from "../assets/starInactive.svg";
 import starActiveSVG from "../assets/starActive.svg";
 
 function Ratings(props) {
+  //Génération d'un tableau d'éléments selon la note
   const ratingArray = [];
   const setRating = () => {
     for (let i = 0; i < props.location.rating; i++) {

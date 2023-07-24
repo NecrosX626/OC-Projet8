@@ -2,6 +2,7 @@ import Banner from "../components/Banner"
 import bannerSrc from "../assets/mountainBanner.png"
 import Collapse from "../components/Collapse"
 const bannerTitle = ""
+//Contenu des collapses
 const aboutCollapse = [
     {
         label : "Fiabilité",
@@ -23,12 +24,12 @@ const aboutCollapse = [
 
 function About(){
     return(
-        <section className="aboutPage">
+        <main className="aboutPage">
             <Banner img={bannerSrc} title={bannerTitle} />
             {aboutCollapse.map((element, index) =>(
                 <Collapse key={"aboutCollapse" + index} label={element.label} content={element.text}/>
             ))}
-        </section>
+        </main>
     )
 }
 export default About

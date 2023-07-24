@@ -15,7 +15,7 @@ function Caroussel(props){
       useEffect(() => {
         loadData()
       }, []);
-    //Définition des fonctions pour changer de slide
+    //Fonctions de changement de slide
     const [visibleSlide, switchSlide] = useState(0)
     const previousSlide = () =>{
         if (visibleSlide > 0){
@@ -33,7 +33,6 @@ function Caroussel(props){
             switchSlide(visibleSlide + 1)
         }
     }
-    //Composant
     return(
         <div className="caroussel flexVertical">
                 <img className="caroussel__slide" src={data[visibleSlide]} alt="carouselImg"/>

@@ -10,11 +10,11 @@ import Host from "../components/Host";
 import Ratings from "../components/Ratings";
 
 function Location() {
-  //Je récupère les données
+  //States du composant
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const { locationIndex } = useParams();
-
+//Récupération des données
   function loadData() {
     setLoading(true);
     FetchData()
@@ -26,8 +26,10 @@ function Location() {
   }, []);
 
   if (loading) {
+    //Attente des données
     return;
   } else {
+    //Gestion des ID de location inexistants
     let locationsNb = data.length;
     if (locationIndex >= locationsNb) {
       return(
@@ -37,7 +39,7 @@ function Location() {
     else{
       let activeLocation = data[locationIndex];
       return (
-        <section className="locationSection">
+        <main className="locationPage">
           <Caroussel index={locationIndex} />
           <div className="locationWrapper flexVertical">
             <div className="location flexHorizontal">
@@ -68,7 +70,7 @@ function Location() {
               />
             </div>
           </div>
-        </section>
+        </main>
       );
     }
   }

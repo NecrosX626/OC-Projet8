@@ -52,8 +52,9 @@
   flex-direction: column;
 }
 
-section {
+main {
   max-width: 1240px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -85,17 +86,19 @@ header {
   justify-content: space-between;
   margin: auto;
   padding: 2em 0;
-  width: 1240px;
+  max-width: 1240px;
+  width: 100%;
 }
 header img {
-  max-width: auto;
+  max-width: 20%;
+  height: 20%;
 }
 header nav {
   justify-content: space-between;
   align-items: center;
-}
-header nav .navLink {
-  padding-left: 5em;
+  flex-wrap: wrap;
+  min-width: 25%;
+  gap: 1em;
 }
 
 footer {
@@ -106,7 +109,7 @@ footer {
   background-color: black;
 }
 footer img {
-  width: 10%;
+  max-width: 25%;
 }
 footer p {
   text-align: center;
@@ -304,23 +307,24 @@ footer p {
   font-size: 18px;
 }
 
+@media screen and (max-width: 1240px) {
+  main, header {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
 @media screen and (max-width: 380px) {
-  section,
-  header {
-    max-width: 350px;
-  }
-  header img {
-    max-width: 30%;
-  }
+  main nav,
   header nav {
     font-size: 12px;
     text-transform: uppercase;
   }
+  main nav .navLink,
   header nav .navLink {
-    padding-left: 3em;
+    white-space: nowrap;
   }
   footer img {
-    width: 50%;
+    min-width: 50%;
   }
   footer p {
     max-width: 40%;

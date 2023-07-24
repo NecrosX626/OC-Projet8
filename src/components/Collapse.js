@@ -2,7 +2,9 @@ import { useState } from "react";
 import arrowUp from "../assets/arrowUp.svg";
 
 function Collapse(props) {
+  //State du Collapse
   const [isOpen, setIsOpen] = useState(false);
+  //Foncion d'ouverture / fermeture
   const toggle = (selectedElement) => {
     if (isOpen === selectedElement) {
       return setIsOpen(false);

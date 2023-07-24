@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import FetchData from "./FetchData";
 
 function Gallery() {
-  
+  //States du Composant
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(true);
-
+  //Récupération des Données
   function loadData() {
     setLoading(true)
     FetchData()

@@ -5,10 +5,10 @@ const bannerTitle = "Chez vous, partout et ailleurs"
 
 function Home(){
     return(
-        <section className="homePage">
+        <main className="homePage">
             <Banner img={bannerSrc} title={bannerTitle} />
             <Gallery />
-        </section>
+        </main>
     )
 }
 export default Home

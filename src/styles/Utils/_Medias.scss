@@ -1,24 +1,25 @@
+@media screen and (max-width: 1240px) {
+  main, header{
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
 @media screen and (max-width: 380px) {
   //BASE
-  section,
+  main,
   header {
-    max-width: 350px;
-  }
-  header {
-    img {
-      max-width: 30%;
-    }
     nav {
       font-size: $mobile-S;
       text-transform: uppercase;
       .navLink {
-        padding-left: 3em;
+        white-space :nowrap;
       }
     }
   }
   footer {
     img {
-      width: 50%;
+      min-width: 50%;
     }
     p {
       max-width: 40%;
