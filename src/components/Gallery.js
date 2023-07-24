@@ -1,23 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import FetchData from "./FetchData";
 
 function Gallery() {
   //States du Composant
-  const [data, setData] = useState([])
+  const [locationsList, setLocationsList] = useState([])
   const [loading, setLoading] = useState(true);
   //Récupération des Données
-  function loadData() {
-    setLoading(true)
-    FetchData()
-      .then((result) => {
-        setData(result)
-      })
-      .then(setLoading(false))
-  }
   useEffect(() => {
-    loadData()
-  }, []);
+    fetch("http://localhost:3000/locationsData.json")
+      .then((response) => response.json())
+      .then((data) => (setLocationsList(data)))
+      .then(setLoading(false))
+  }, [setLocationsList, setLoading]);
 
   if (loading){
     return
@@ -25,9 +19,9 @@ function Gallery() {
   else{
     return (
       <div className="gallery flexHorizontal">
-        {data.map((location, index) => (
+        {locationsList.map((location) => (
           <article key={"thumbnail" + location.id}>
-            <Link to={`/Location/${index}`} className="links flexVertical">
+            <Link to={`/Location/${location.id}`} className="links flexVertical">
               <img src={location.cover} alt="thumbnail" />
               <div className="gradient">
                 <h3>{location.title}</h3>

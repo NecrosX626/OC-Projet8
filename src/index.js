@@ -19,7 +19,7 @@ root.render(
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Location/:locationIndex" element={<Location />} />
+        <Route path="/Location/:locationID" element={<Location />} />
         <Route path="/About" element={<About />} />
         <Route path="/Missing" element={<Missing />} />
         <Route path="*" element={<Missing />} />

@@ -2,11 +2,11 @@ function Host(props) {
     return (
       <div className="host flexHorizontal">
         <div className="host__name">
-          <span>{props.location.host.name}</span>
+          <span>{props.host.name}</span>
         </div>
         <img
           className="host__pic"
-          src={props.location.host.picture}
+          src={props.host.picture}
           alt="hostPic"
         />
       </div>

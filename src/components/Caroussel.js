@@ -1,20 +1,8 @@
-import { useState, useEffect } from "react"
-import FetchData from "./FetchData"
+import { useState } from "react"
 import arrowRight from "../assets/arrowRight.svg"
 import arrowLeft from "../assets/arrowLeft.svg"
 
 function Caroussel(props){
-    //Récupération des Données
-    const [data, setData] = useState([])
-    function loadData() {
-        FetchData()
-          .then((result) => {
-            setData(result[props.index].pictures)
-          })
-      }
-      useEffect(() => {
-        loadData()
-      }, []);
     //Fonctions de changement de slide
     const [visibleSlide, switchSlide] = useState(0)
     const previousSlide = () =>{
@@ -22,11 +10,11 @@ function Caroussel(props){
             switchSlide(visibleSlide - 1)
         }
         else{
-            switchSlide(data.length - 1)
+            switchSlide(props.pictures.length - 1)
         }
     }
     const nextSlide = () =>{
-        if (visibleSlide >=  data.length - 1){
+        if (visibleSlide >=  props.pictures.length - 1){
             switchSlide(0)
         }
         else{
@@ -35,10 +23,10 @@ function Caroussel(props){
     }
     return(
         <div className="caroussel flexVertical">
-                <img className="caroussel__slide" src={data[visibleSlide]} alt="carouselImg"/>
+                <img className="caroussel__slide" src={props.pictures[visibleSlide]} alt="carouselImg"/>
                 <img className="caroussel__arrow--left" src={arrowLeft} onClick={previousSlide} alt="Caroussel arrow left"/>
                 <img className="caroussel__arrow--right" src={arrowRight} onClick={nextSlide} alt="Caroussel arrow right"/>
-                <span>{visibleSlide + 1 + "/" +  data.length}</span>
+                <span>{visibleSlide + 1 + "/" +  props.pictures.length}</span>
         </div>
     )
 }
