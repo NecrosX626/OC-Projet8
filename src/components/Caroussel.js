@@ -21,13 +21,22 @@ function Caroussel(props){
             switchSlide(visibleSlide + 1)
         }
     }
-    return(
-        <div className="caroussel flexVertical">
-                <img className="caroussel__slide" src={props.pictures[visibleSlide]} alt="carouselImg"/>
-                <img className="caroussel__arrow--left" src={arrowLeft} onClick={previousSlide} alt="Caroussel arrow left"/>
-                <img className="caroussel__arrow--right" src={arrowRight} onClick={nextSlide} alt="Caroussel arrow right"/>
-                <span>{visibleSlide + 1 + "/" +  props.pictures.length}</span>
-        </div>
-    )
+    if (props.pictures.length > 1){
+        return(
+            <div className="caroussel flexVertical">
+                    <img className="caroussel__slide" src={props.pictures[visibleSlide]} alt="carouselImg"/>
+                    <img className="caroussel__arrow--left" src={arrowLeft} onClick={previousSlide} alt="Caroussel arrow left"/>
+                    <img className="caroussel__arrow--right" src={arrowRight} onClick={nextSlide} alt="Caroussel arrow right"/>
+                    <span>{visibleSlide + 1 + "/" +  props.pictures.length}</span>
+            </div>
+        )
+    }
+    else {
+        return(
+            <div className="caroussel flexVertical">
+                    <img className="caroussel__slide" src={props.pictures[visibleSlide]} alt="carouselImg"/>
+            </div>
+        )
+    }
 }
 export default Caroussel
