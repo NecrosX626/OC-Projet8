@@ -5,7 +5,7 @@
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 800px) {
   //BASE
   main,
   header {
@@ -64,8 +64,13 @@
   .gallery {
     background-color: white;
     padding: 0;
-    .links {
+    max-width: 100%;
+    article{
+      max-width: 100%;
       max-height: 15em;
+    }
+    .links {
+      max-height: 100%;
     }
   }
   //ABOUT PAGE
