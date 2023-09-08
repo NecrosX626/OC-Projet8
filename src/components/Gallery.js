@@ -7,7 +7,7 @@ function Gallery() {
   const [loading, setLoading] = useState(true);
   //Récupération des Données
   useEffect(() => {
-    fetch("http://localhost:3000/locationsData.json")
+    fetch("/locationsData.json")
       .then((response) => response.json())
       .then((data) => (setLocationsList(data)))
       .then(setLoading(false))

@@ -13,15 +13,15 @@ function Location() {
   const [activeLocation, setActiveLocation] = useState([]);
   const [loading, setLoading] = useState(true);
   const { locationID } = useParams();
-//Récupération des données
+  //Récupération des données
   useEffect(() => {
-    fetch("http://localhost:3000/locationsData.json")
+    fetch("/locationsData.json")
       .then((response) => response.json())
       .then((locationsList) => {
-        const location = locationsList.find((l) => l.id === locationID)
-        setActiveLocation(location || null)
-        setLoading(false)
-      })
+        const location = locationsList.find((l) => l.id === locationID);
+        setActiveLocation(location || null);
+        setLoading(false);
+      });
   }, [locationID, setActiveLocation, setLoading]);
 
   if (loading) {
@@ -30,11 +30,8 @@ function Location() {
   } else {
     //Gestion des ID de location inexistants
     if (activeLocation === null) {
-      return(
-        <Navigate replace to={"/Missing"} />
-      )
-    }
-    else{
+      return <Navigate replace to={"/Missing"} />;
+    } else {
       return (
         <main className="locationPage">
           <Caroussel pictures={activeLocation.pictures} />
@@ -64,7 +61,7 @@ function Location() {
                     ))}
                   </ul>
                 }
-              /> 
+              />
             </div>
           </div>
         </main>
