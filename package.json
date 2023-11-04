@@ -1,7 +1,7 @@
 {
   "name": "kasa",
   "version": "0.1.0",
-  "homepage": "https://necrosx626.github.io/OC-Projet8/",
+  "homepage": "https://necrosx626.github.io/OC-Projet8",
   "private": true,
   "proxy": "http://localhost:3000",
   "dependencies": {
