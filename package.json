@@ -1,6 +1,7 @@
 {
   "name": "kasa",
   "version": "0.1.0",
+  "homepage": "https://necrosx626.github.io/OC-Projet8/",
   "private": true,
   "proxy": "http://localhost:3000",
   "dependencies": {
@@ -18,7 +19,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "sass --watch ./src/styles/main.scss:./src/styles/main.css"
+    "sass": "sass --watch ./src/styles/main.scss:./src/styles/main.css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -37,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
   }
 }
